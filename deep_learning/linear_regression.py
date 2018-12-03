@@ -119,11 +119,12 @@ def drawdata(dataset, traindata, testdata):
 
 
 # 测试
-dataset = load_csv('file.csv')
-print(dataset)
-str_to_float(dataset)
-print(dataset)
-percent = 0.6
-rmse, traindata, testdata = evaluate_algorithm(dataset, linear_regression, percent)
-drawdata(dataset, traindata, testdata)
-print("RMSE:%.3f" % (rmse))
+if __name__ == '__main__':
+    dataset = load_csv('file.csv')
+    print(dataset)
+    str_to_float(dataset)
+    print(dataset)
+    percent = 0.6
+    rmse, traindata, testdata = evaluate_algorithm(dataset, linear_regression, percent)
+    drawdata(dataset, traindata, testdata)
+    print("RMSE:%.3f" % (rmse))
